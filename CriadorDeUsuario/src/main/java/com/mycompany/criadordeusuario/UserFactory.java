@@ -9,6 +9,7 @@ package com.mycompany.criadordeusuario;
  * @author igorb
  */
 public class UserFactory {
+
     public static User createUser(String t) {
         switch (t.toLowerCase()) {
             case "admin" -> {
@@ -20,7 +21,9 @@ public class UserFactory {
             case "viewer" -> {
                 return new Viewer();
             }
-            default -> throw new IllegalArgumentException("Tipo de user invalido: " + t);
+            default ->
+                throw new IllegalArgumentException("Tipo de user invalido: " + t);
         }
-    };
+    }
+;
 }
